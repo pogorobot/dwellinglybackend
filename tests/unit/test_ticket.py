@@ -1,6 +1,6 @@
 from tests.unit.base_interface_test import BaseInterfaceTest
 from models.tickets import TicketModel
-from schemas.tickets import TicketSchema
+from schemas.ticket import TicketSchema
 
 class TestBaseTicketModel(BaseInterfaceTest):
     def setup(self):
