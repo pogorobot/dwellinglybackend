@@ -11,8 +11,7 @@ class TicketSchema(ma.SQLAlchemyAutoSchema):
         include_fk = True
 
     tenant = fields.Nested("TenantSchema")
-    assignedUser = fields.Nested("UserSchema")
-    sender = fields.Nested("UserSchema")
+    user = fields.Nested("UserSchema")
 
     @validates("tenant")
     def validate_tenant(self, value):
