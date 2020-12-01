@@ -19,7 +19,7 @@ class TicketModel(BaseModel):
 
     id = db.Column(db.Integer, primary_key=True)
     issue = db.Column(db.String(144))
-    tenant = db.Column(db.Integer, db.ForeignKey('tenants.id'))
+    tenantID = db.Column(db.Integer, db.ForeignKey('tenants.id'))
     assignedUser = db.Column(db.Integer, db.ForeignKey('users.id'))
     sender = db.Column(db.Integer, db.ForeignKey('users.id'))
     status = db.Column(db.Enum(TicketStatus))
